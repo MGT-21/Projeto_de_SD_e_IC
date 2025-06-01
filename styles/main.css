@@ -1,0 +1,14 @@
+.main {
+    padding-top: 2rem;
+    padding-inline: 1rem;
+}
+
+.main-title {
+    font-weight: 600;
+    padding-bottom: .5rem;
+}
+
+.main-about-description {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
