@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <header>
     <nav class="navbar bg-body-tertiary fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Cancela C01CS</a>
@@ -44,63 +44,69 @@
         </div>
       </div>
     </nav>
+  </header>
+
+  <main>
     <div class="container-img-arduino pt-3">
       <img class="arduino-prototipo" src="assets/Mapa_arduino.jpg" alt="">
     </div>
-  </header>
-
-  <section class="main">
-    <h2 class="main-title">Sobre o projeto</h2>
-    <p class="main-about-description">
+    <h2 class="">Sobre o projeto</h2>
+    <p class="">
       O projeto tem o objetivo de combater a passagem irregular em cancelas automáticas, que compromete a segurança e o
       controle de acesso em condomínios, estacionamentos e centros empresariais.
     </p>
-    <p class="main-about-description">
+    <p class="">
       Por meio de duas cancelas e sensores para impedir entradas não autorizadas, visamos garantir maior segurança,
       rastreabilidade e eficiência no controle veicular.
     </p>
 
-    <div class="button-container">
-      <div class="main-button">Cancela</div>
-      <div class="main-button">Anti-Evasão</div>
-      <div class="main-button">Inteligente</div>
-      <div class="main-button">Arduino</div>
+    <div class="">
+      <div class="">Cancela</div>
+      <div class="">Anti-Evasão</div>
+      <div class="">Inteligente</div>
+      <div class="">Arduino</div>
     </div>
-    <br>
-    <h2 class="main-title">Como fazer</h2>
-      <div class="main-about-description">
-        <a><strong>Você vai precisa de: <br>softwares:</strong></a>
-        <ul>
-          <li>Arduino IDE v2.3.6</li>
-          <li>Tikercard site</li>
-        </ul>
-      </div>
-    <p class="main-about-description"><strong>Componentes (core):</strong></p>
-    <ul>
-      <li>14x jumpers macho-macho</li>
-      <li>8x jumpers femea</li>
-      <li>2x leds (1 verde e 1 vermelho)</li>
-      <li>2x resistores (220Ω~300Ω)</li>
-      <li>1x Botão</li>
-      <li>2x Servos Motores</li>
-      <li>2x Sensores ultrassonicos (HC-SR04)</li>
-      <li>1x Placa Arduino Uno</li>
-      <li>1x Protoboard</li>
-    </ul>
-    <p class="main-about-description"><strong>Itens opinicionais:</strong></p>
-    <ul>
-      <li>Caixa de papelão</li>
-      <li>Palito de picolé (cancela)</li>
-      <li>+6 Jumpers fêmea (colocar botão e leds fora da protoboard)</li>
-    </ul>
+  </main>
+
+  <section>
+    <div>
+      <h2 class="">Itens necessários</h2>
+      <ul>
+        <li>Arduino IDE v2.3.6</li>
+        <li>Tikercard site</li>
+      </ul>
+    </div>
+    <div>
+
+      <h3 class="">Componentes (core)</h3>
+      <ul>
+        <li>14x jumpers macho-macho</li>
+        <li>8x jumpers femea</li>
+        <li>2x leds (1 verde e 1 vermelho)</li>
+        <li>2x resistores (220Ω~300Ω)</li>
+        <li>1x Botão</li>
+        <li>2x Servos Motores</li>
+        <li>2x Sensores ultrassonicos (HC-SR04)</li>
+        <li>1x Placa Arduino Uno</li>
+        <li>1x Protoboard</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="">Itens opinicionais:</h3>
+      <ul>
+        <li>Caixa de papelão</li>
+        <li>Palito de picolé (cancela)</li>
+        <li>+6 Jumpers fêmea (colocar botão e leds fora da protoboard)</li>
+      </ul>
+    </div>
   </section>
 
-  <section class="problems-lessons" id="problems-lessons">
-    <h2 class="problems-lessons-title">Problemas e Lições</h2>
+  <section class="" id="">
+    <h2 class="">Problemas e Lições</h2>
+    <div>
 
-    <div class="problems-section">
       <h3>Problemas Encontrados</h3>
-      <ul class="problems-list">
+      <ul class="">
         <li>
           <strong>Identificação da placa pelo software Arduino IDE:</strong>
           <p>Solução: Baixamos o software da Robocore. Outra alternativa seria rodar o projeto em uma distribuição
@@ -117,10 +123,9 @@
         </li>
       </ul>
     </div>
-
-    <div class="lessons-section">
+    <div>
       <h3>Lições Aprendidas</h3>
-      <ul class="lessons-list">
+      <ul class="">
         <li>Adote padrões sempre que possível nos cabos do Arduino</li>
         <li>Mantenha o código do Arduino o mais fácil de entender possível e modularizado</li>
         <li>Evite redundância nos códigos</li>
