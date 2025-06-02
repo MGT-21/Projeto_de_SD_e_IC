@@ -13,7 +13,7 @@
 
 <body>
   <header>
-    <nav class="navbar bg-body-tertiary fixed-top">
+    <nav class="navbar bg-body-tertiary fixed-top px-2">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Cancela C01CS</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -49,11 +49,9 @@
     </nav>
   </header>
 
-  <main>
-    <div class="pt-3">
-      <img class="" src="assets/Mapa_arduino.jpg" alt="">
-    </div>
-    <h2 class="">Sobre o projeto</h2>
+  <main class="px-3">
+    <img class="w-100" src="assets/Mapa_arduino.jpg" alt="foto do esquema do nosso projeto">
+    <h2 class="mt-3 fw-bold">Sobre o projeto</h2>
     <p class="">
       O projeto tem o objetivo de combater a passagem irregular em cancelas automáticas, que compromete a segurança e o
       controle de acesso em condomínios, estacionamentos e centros empresariais.
@@ -63,17 +61,17 @@
       rastreabilidade e eficiência no controle veicular.
     </p>
 
-    <div class="">
-      <div class="">Cancela</div>
-      <div class="">Anti-Evasão</div>
-      <div class="">Inteligente</div>
-      <div class="">Arduino</div>
+    <div class="h3">
+      <span class="badge text-bg-primary">Cancela</span>
+      <span class="badge text-bg-primary">Anti-Evasão</span>
+      <span class="badge text-bg-primary">Inteligente</span>
+      <span class="badge text-bg-primary">Arduino</span>
     </div>
   </main>
 
-  <section>
+  <section class="px-3 mt-5">
     <div>
-      <h3 class="">Itens necessários</h3>
+      <h3 class="fw-medium">Itens necessários</h3>
       <ul>
         <li>Arduino IDE v2.3.6</li>
         <li>Tikercard site</li>
@@ -81,7 +79,7 @@
     </div>
     <div>
 
-      <h3 class="">Componentes (core)</h3>
+      <h3 class="fw-medium">Componentes (core)</h3>
       <ul>
         <li>14x jumpers macho-macho</li>
         <li>8x jumpers femea</li>
@@ -95,7 +93,7 @@
       </ul>
     </div>
     <div>
-      <h3 class="">Itens opinicionais:</h3>
+      <h3 class="fw-medium">Itens opinicionais:</h3>
       <ul>
         <li>Caixa de papelão</li>
         <li>Palito de picolé (cancela)</li>
@@ -104,30 +102,29 @@
     </div>
   </section>
 
-  <section class="" id="">
-    <h2 class="">Problemas e Lições</h2>
-    <div>
-
-      <h3>Problemas Encontrados</h3>
-      <ul class="">
+  <section class="px-3 mt-5" id="">
+    <h2 class="fw-bold">Problemas e Lições</h2>
+    <div class="mt-3">
+      <h3 class="fw-medium">Problemas Encontrados:</h3>
+      <ul class="pt-2">
         <li>
-          <h4>Identificação da placa pelo software Arduino IDE:</h4>
+          <h4 class="h5 fw-medium">Identificação da placa pelo software Arduino IDE:</h4>
           <p>Solução: Baixamos o software da Robocore. Outra alternativa seria rodar o projeto em uma distribuição
             Linux.</p>
         </li>
         <li>
-          <h4>Identificação dos fios referentes a cada componente:</h4>
+          <h4 class="h5 fw-medium">Identificação dos fios referentes a cada componente:</h4>
           <p>Solução: Usamos um padrão de cor para o GND, VCC e sinal para facilitar o entendimento.</p>
         </li>
         <li>
-          <h4>Posicionamento de motores e sensores na caixa:</h4>
+          <h4 class="h5 fw-medium">Posicionamento de motores e sensores na caixa:</h4>
           <p>Solução: Trocamos a caixa que a princípio era muito pequena e usamos cola quente para fixar alguns
             elementos evitando má conexão e outros problemas.</p>
         </li>
       </ul>
     </div>
-    <div>
-      <h3>Lições Aprendidas</h3>
+    <div class="mt-3">
+      <h3 class="fw-medium">Lições Aprendidas:</h3>
       <ul class="">
         <li>Adote padrões sempre que possível nos cabos do Arduino</li>
         <li>Mantenha o código do Arduino o mais fácil de entender possível e modularizado</li>
