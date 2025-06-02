@@ -2,114 +2,137 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cancela - Arduino Projeto</title>
-    <link rel="stylesheet" href="styles/global.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cancela - Arduino Projeto</title>
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/header.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
 </head>
 
 <body>
-<header class="header">
-  <nav class="navbar bg-body-tertiary fixed-top">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Cancela C01CS</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Cancela C01CS</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Sobre o Projeto</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Como fazer</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#problems-lessons">Problemas e Lições</a>
-            </li>
-             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Nosso grupo</a>
-            </li>
-          </ul>
+  <header class="header">
+    <nav class="navbar bg-body-tertiary fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Cancela C01CS</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Cancela C01CS</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Sobre o Projeto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Como fazer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#problems-lessons">Problemas e Lições</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Nosso grupo</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+    </nav>
+    <div class="container-img-arduino pt-3">
+      <img class="arduino-prototipo" src="assets/Mapa_arduino.jpg" alt="">
     </div>
-  </nav>
-  <div class="container-img-arduino pt-3">
-    <img class="arduino-prototipo" src="assets/Mapa_arduino.jpg" alt="">
-  </div>
-</header>
+  </header>
 
-<section class="main">
-  <h2 class="main-title">Sobre o projeto</h2>
-  <p class="main-about-description">
-    O projeto tem o objetivo de combater a passagem irregular em cancelas automáticas, que compromete a segurança e o controle de acesso em condomínios, estacionamentos e centros empresariais.
-  </p>
-  <p class="main-about-description">
-    Por meio de duas cancelas e sensores para impedir entradas não autorizadas, visamos garantir maior segurança, rastreabilidade e eficiência no controle veicular.
-  </p>
-  <p class="main-about-description"><strong>Componentes (core):</strong></p>
-   <ul>
-    <li>14x jumpers macho-macho</li>
-    <li>8x jumpers femea</li>
-    <li>2x leds (1 verde e 1 vermelho)</li>
-    <li>2x resistores (220Ω~300Ω)</li>
-    <li>1x Botão</li>
-    <li>2x Servos Motores</li>
-    <li>2x Sensores ultrassonicos (HC-SR04)</li>
-    <li>1x Placa Arduino Uno</li>
-    <li>1x Protoboard</li>
-  </ul>
-  <p class="main-about-description"><strong>Itens opinicionais:</strong></p>
-  <ul>
-   <li>Caixa de papelão</li>
-   <li>Palito de picolé (cancela)</li>
-   <li>+6 Jumpers fêmea (colocar botão e leds fora da protoboard)</li>
-  </ul>
-</section>
+  <section class="main">
+    <h2 class="main-title">Sobre o projeto</h2>
+    <p class="main-about-description">
+      O projeto tem o objetivo de combater a passagem irregular em cancelas automáticas, que compromete a segurança e o
+      controle de acesso em condomínios, estacionamentos e centros empresariais.
+    </p>
+    <p class="main-about-description">
+      Por meio de duas cancelas e sensores para impedir entradas não autorizadas, visamos garantir maior segurança,
+      rastreabilidade e eficiência no controle veicular.
+    </p>
 
-<section class="problems-lessons" id="problems-lessons">
-  <h2 class="problems-lessons-title">Problemas e Lições</h2>
-  
-  <div class="problems-section">
-    <h3>Problemas Encontrados</h3>
-    <ul class="problems-list">
-      <li>
-        <strong>Identificação da placa pelo software Arduino IDE:</strong>
-        <p>Solução: Baixamos o software da Robocore. Outra alternativa seria rodar o projeto em uma distribuição Linux.</p>
-      </li>
-      <li>
-        <strong>Identificação dos fios referentes a cada componente:</strong>
-        <p>Solução: Usamos um padrão de cor para o GND, VCC e sinal para facilitar o entendimento.</p>
-      </li>
-      <li>
-        <strong>Posicionamento de motores e sensores na caixa:</strong>
-        <p>Solução: Trocamos a caixa que a princípio era muito pequena e usamos cola quente para fixar alguns elementos evitando má conexão e outros problemas.</p>
-      </li>
+    <div class="button-container">
+      <div class="main-button">Cancela</div>
+      <div class="main-button">Anti-Evasão</div>
+      <div class="main-button">Inteligente</div>
+      <div class="main-button">Arduino</div>
+    </div>
+    <br>
+    <h2 class="main-title">Como fazer</h2>
+      <div class="main-about-description">
+        <a><strong>Você vai precisa de: <br>softwares:</strong></a>
+        <ul>
+          <li>Arduino IDE v2.3.6</li>
+          <li>Tikercard site</li>
+        </ul>
+      </div>
+    <p class="main-about-description"><strong>Componentes (core):</strong></p>
+    <ul>
+      <li>14x jumpers macho-macho</li>
+      <li>8x jumpers femea</li>
+      <li>2x leds (1 verde e 1 vermelho)</li>
+      <li>2x resistores (220Ω~300Ω)</li>
+      <li>1x Botão</li>
+      <li>2x Servos Motores</li>
+      <li>2x Sensores ultrassonicos (HC-SR04)</li>
+      <li>1x Placa Arduino Uno</li>
+      <li>1x Protoboard</li>
     </ul>
-  </div>
-  
-  <div class="lessons-section">
-    <h3>Lições Aprendidas</h3>
-    <ul class="lessons-list">
-      <li>Adote padrões sempre que possível nos cabos do Arduino</li>
-      <li>Mantenha o código do Arduino o mais fácil de entender possível e modularizado</li>
-      <li>Evite redundância nos códigos</li>
+    <p class="main-about-description"><strong>Itens opinicionais:</strong></p>
+    <ul>
+      <li>Caixa de papelão</li>
+      <li>Palito de picolé (cancela)</li>
+      <li>+6 Jumpers fêmea (colocar botão e leds fora da protoboard)</li>
     </ul>
-  </div>
-</section>
+  </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  <section class="problems-lessons" id="problems-lessons">
+    <h2 class="problems-lessons-title">Problemas e Lições</h2>
+
+    <div class="problems-section">
+      <h3>Problemas Encontrados</h3>
+      <ul class="problems-list">
+        <li>
+          <strong>Identificação da placa pelo software Arduino IDE:</strong>
+          <p>Solução: Baixamos o software da Robocore. Outra alternativa seria rodar o projeto em uma distribuição
+            Linux.</p>
+        </li>
+        <li>
+          <strong>Identificação dos fios referentes a cada componente:</strong>
+          <p>Solução: Usamos um padrão de cor para o GND, VCC e sinal para facilitar o entendimento.</p>
+        </li>
+        <li>
+          <strong>Posicionamento de motores e sensores na caixa:</strong>
+          <p>Solução: Trocamos a caixa que a princípio era muito pequena e usamos cola quente para fixar alguns
+            elementos evitando má conexão e outros problemas.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="lessons-section">
+      <h3>Lições Aprendidas</h3>
+      <ul class="lessons-list">
+        <li>Adote padrões sempre que possível nos cabos do Arduino</li>
+        <li>Mantenha o código do Arduino o mais fácil de entender possível e modularizado</li>
+        <li>Evite redundância nos códigos</li>
+      </ul>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
