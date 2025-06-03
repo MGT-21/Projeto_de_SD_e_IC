@@ -157,25 +157,60 @@
           <p>//Parte que associa as constantes aos devidos sensores//</p>
           void setup()<br>
           {<br>
-            &nbsp;&nbsp;//motor esquerdo//<br>
+            &nbsp;&nbsp;//motor direito//<br>
             &nbsp;&nbsp;servo_7.attach(7, 500, 2500);  <br>
             <br>
-            &nbsp;&nbsp;//motor direito//<br>
+            &nbsp;&nbsp;//motor esquerdo//<br>
             &nbsp;&nbsp;servo_6.attach(6, 500, 2500);  <br>
             <br>
-            &nbsp;&nbsp;//sensor esquerdo//<br>
+            &nbsp;&nbsp;//sensor direito//<br>
             &nbsp;&nbsp;pinMode(trig_7,OUTPUT); <br>
             &nbsp;&nbsp;pinMode(echo_7,INPUT); <br>
             <br>
-            &nbsp;&nbsp;//sensor direito//<br>
+            &nbsp;&nbsp;//sensor esquerdo//<br>
             &nbsp;&nbsp;pinMode(trig_6,OUTPUT); <br>
             &nbsp;&nbsp;pinMode(echo_6,INPUT); <br>
             <br>
             &nbsp;&nbsp;pinMode(PINO_BOTAO, INPUT_PULLUP); <br>
-            &nbsp;&nbsp;pinMode(LED_VERDE, OUTPUT);
-            &nbsp;&nbsp;pinMode(LED_VERMELHO, OUTPUT);
+            &nbsp;&nbsp;pinMode(LED_VERDE, OUTPUT);<br>
+            &nbsp;&nbsp;pinMode(LED_VERMELHO, OUTPUT);<br>
             &nbsp;&nbsp;Serial.begin(9600); <br>
           }<br>
+          <br>
+          <p>//Parte principal do código//<p>
+          void loop()<br>
+          {<br>
+          &nbsp;&nbsp;ligar_led_vermelho();
+          <p>//O sensor verifica se tem carro próximo//</p>
+          &nbsp;&nbsp;double dist_sensor6 = verificarPresenca6();<br>
+          &nbsp;&nbsp;do {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;dist_sensor6 = verificarPresenca6();<br>
+          &nbsp;&nbsp;}while (dist_sensor6 > 7);<br>
+          &nbsp;<p>//O sensor fica verificando até o carro passar completamente//</p>
+          &nbsp;&nbsp;do {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;dist_sensor6 = verificarPresenca6();<br>
+          &nbsp;&nbsp;}while(dist_sensor6 < 10);<br>
+          <br>
+          &nbsp;&nbsp;fecharCancela6();<br>
+          &nbsp;&nbsp;bool carroDentro = true;<br>
+          <br>
+          &nbsp;&nbsp;<p>//Enquanto o carro estiver dentro, espera o motorista apertar o botao para liberar o acesso//<p></p>
+          &nbsp;&nbsp;do{<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;if (digitalRead(PINO_BOTAO) == LOW){<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;abrirCancela7();<br>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>//Sensor fica verificando ate o veículo passar completamente//<p></p>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;double dist_sensor7 = verificarPresenca7();<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do {<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dist_sensor7 = verificarPresenca7();<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}while(dist_sensor7 < 14);<br>
+          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;carroDentro == false;<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fecharCancela7();<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;abrirCancela6();
+          }<br>
+          &nbsp;&nbsp;}while( carroDentro == true);
+          }
         </div>
       </code>
     </div>
